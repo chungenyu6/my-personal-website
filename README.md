@@ -6,7 +6,7 @@
 
 ## 網站設計
 
-- 視覺方向：以 Allen Wu、Reza Salehi 類型的清楚研究者網站為資訊基礎，加入較成熟的 editorial typography 與留白。
+- 視覺方向：以清楚的研究者網站為資訊基礎，加入較成熟的 editorial typography 與留白。
 - 字體：self-hosted `Newsreader`（display）與 `Inter`（body），不依賴 Google Fonts 或 runtime CDN。
 - 技術：semantic HTML、modern CSS、零 client-side JavaScript、零 production dependency。
 - 主內容：研究定位、selected research、publications、news、Learn、CV 與聯絡方式。
