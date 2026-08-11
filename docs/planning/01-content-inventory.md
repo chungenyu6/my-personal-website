@@ -60,10 +60,10 @@ Review 日期：2026-08-11
 
 ## 現有技術與 repository 狀態
 
-- 最上層 `personal-website/` 目錄目前不是 Git repository。
+- 最上層 `personal-website/` 已初始化並發布為 `chungenyu6/my-personal-website`。
 - `my-old-web/jbook_file/` 是位於 branch `main` 的 nested Git repository。
-- Nested repository remote 是 `git@github.com:chungenyu6/johnny_ai_interview_prep_2026.git`。
-- `myst.yml` 與舊 README 卻指向 `chungenyu6/chung_en_johnny_yu_website`，這是部署前必須解決的不一致。
+- Nested repository 的 local remote 是 `git@github.com:chungenyu6/johnny_ai_interview_prep_2026.git`；GitHub 目前會 redirect 到實際名稱 `chung_en_johnny_yu_website`。
+- `myst.yml`、README 與 local remote 已統一使用 canonical repository `chungenyu6/chung_en_johnny_yu_website`。
 - 舊站 Git status 包含使用者擁有的 `.DS_Store` 本機變更，必須保留。
 - 目前的 GitHub Action 可以使用 MyST／Jupyter Book build 並部署至 Pages，代表 notebooks 本身可透過 static hosting 發布。
 
@@ -104,4 +104,3 @@ flowchart TD
 - `teaching`：course、role、dates、summary
 
 依最後核准的 stack，implementation 可以將資料保存在 JSON、YAML 或小型 static module。目標是讓未來 agents 只需更新一次 publication data，不必同步修改多個頁面。
-
