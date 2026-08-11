@@ -19,7 +19,7 @@ flowchart LR
     P --> R["Research／Publications"]
     P --> C["CV／Profiles／Email"]
     P --> L["Learn 入口"]
-    L --> M["chung_en_johnny_yu_website<br>獨立 MyST 教材網站"]
+    L --> M["ai-learning-notebooks<br>獨立 MyST 教材網站"]
     M --> N["Rendered notebooks"]
     M --> G["GitHub source"]
     M --> B["Open in Colab"]
@@ -65,7 +65,7 @@ npx --yes mystmd start
 
 ```bash
 cd my-old-web/jbook_file
-BASE_URL=/chung_en_johnny_yu_website npx --yes mystmd build --html
+BASE_URL=/ai-learning-notebooks npx --yes mystmd build --html
 ```
 
 MyST build 只 render 已存在的 notebook outputs，不在 CI 執行昂貴或需要 network 的 notebook code。
