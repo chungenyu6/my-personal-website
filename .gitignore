@@ -1,0 +1,14 @@
+.DS_Store
+**/.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+_site/
+dist/
+coverage/
+tmp/
+artifacts/
+
+# The legacy site remains a separate local Git repository until the new site is stable.
+my-old-web/

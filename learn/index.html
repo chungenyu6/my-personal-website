@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f5f3ec">
+    <meta name="description" content="Hands-on machine learning and large language model notebooks by Chung-En (Johnny) Yu, available as a MyST learning site, source notebooks, and Colab sessions.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Learn — Chung-En (Johnny) Yu">
+    <meta property="og:description" content="A guided notebook series on tokenization, attention, GPT architecture, pretraining, and fine-tuning.">
+    <meta property="og:url" content="https://chungenyu6.github.io/my-personal-website/learn/">
+    <meta property="og:image" content="https://chungenyu6.github.io/my-personal-website/assets/images/social-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Chung-En (Johnny) Yu and the statement Reliable AI that knows when to doubt">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://chungenyu6.github.io/my-personal-website/learn/">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="preload" href="../assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <title>Learn — Chung-En (Johnny) Yu</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="site-shell site-header__inner">
+        <a class="site-name" href="../">Chung-En <span>(Johnny)</span> Yu</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../#research">Research</a>
+          <a href="../publications/">Publications</a>
+          <a href="./" aria-current="page">Learn</a>
+          <a href="mailto:chungenyu6@gmail.com">Email</a>
+          <a class="nav-cta" href="../assets/documents/cv-chung-en-johnny-yu.pdf">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <header class="subpage-hero">
+        <div class="site-shell subpage-heading">
+          <p class="section-index">Open learning notes</p>
+          <div>
+            <h1>Learn how language models work.</h1>
+            <p class="subpage-heading__intro">
+              A code-first notebook sequence for readers who know the basics of machine learning and want to understand the mechanics behind modern LLMs. Read the rendered MyST site, inspect the source, or run each lesson in Colab.
+            </p>
+            <div class="button-row button-row--spaced">
+              <a class="button button--solid" href="https://chungenyu6.github.io/johnny_ai_interview_prep_2026/">Read the MyST site</a>
+              <a class="button" href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026">View repository</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content-section site-shell" aria-labelledby="llm-series">
+        <div class="section-heading">
+          <p class="section-index">Series 01 · LLM</p>
+          <h2 id="llm-series">From tokens to fine-tuning</h2>
+          <p>Six connected notebooks, designed to be read in order or used as focused references.</p>
+        </div>
+
+        <ol class="lesson-list">
+          <li class="lesson-item">
+            <span class="lesson-number">01</span>
+            <div><h2>Tokenization</h2><p>Text segmentation, token IDs, special tokens, byte-pair encoding, sliding windows, embeddings, and position encoding.</p></div>
+            <div class="lesson-links"><a href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/01_tokenization.ipynb">Source ↗</a><a href="https://colab.research.google.com/github/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/01_tokenization.ipynb">Colab ↗</a></div>
+          </li>
+          <li class="lesson-item">
+            <span class="lesson-number">02</span>
+            <div><h2>Attention</h2><p>Self-attention from first principles, causal masking, dropout, and efficient multi-head attention.</p></div>
+            <div class="lesson-links"><a href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/02_attention.ipynb">Source ↗</a><a href="https://colab.research.google.com/github/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/02_attention.ipynb">Colab ↗</a></div>
+          </li>
+          <li class="lesson-item">
+            <span class="lesson-number">03</span>
+            <div><h2>GPT architecture</h2><p>Layer normalization, GELU feed-forward networks, residual connections, transformer blocks, and text generation.</p></div>
+            <div class="lesson-links"><a href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/03_architecture_gpt.ipynb">Source ↗</a><a href="https://colab.research.google.com/github/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/03_architecture_gpt.ipynb">Colab ↗</a></div>
+          </li>
+          <li class="lesson-item">
+            <span class="lesson-number">04</span>
+            <div><h2>Pretraining</h2><p>Cross-entropy, perplexity, training loops, temperature and top-k sampling, checkpoints, and pretrained weights.</p></div>
+            <div class="lesson-links"><a href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/04_pretraining.ipynb">Source ↗</a><a href="https://colab.research.google.com/github/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/04_pretraining.ipynb">Colab ↗</a></div>
+          </li>
+          <li class="lesson-item">
+            <span class="lesson-number">05</span>
+            <div><h2>Fine-tuning for classification</h2><p>Dataset preparation, data loaders, pretrained weights, classification heads, loss, accuracy, and supervised fine-tuning.</p></div>
+            <div class="lesson-links"><a href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/05_finetuning_classification.ipynb">Source ↗</a><a href="https://colab.research.google.com/github/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/05_finetuning_classification.ipynb">Colab ↗</a></div>
+          </li>
+          <li class="lesson-item">
+            <span class="lesson-number">06</span>
+            <div><h2>Instruction fine-tuning</h2><p>Instruction datasets, prompt formatting, batching, supervised fine-tuning, response generation, and evaluation.</p></div>
+            <div class="lesson-links"><a href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/06_finetuning_instructions.ipynb">Source ↗</a><a href="https://colab.research.google.com/github/chungenyu6/johnny_ai_interview_prep_2026/blob/main/02-LLM/06_finetuning_instructions.ipynb">Colab ↗</a></div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-section site-shell" aria-labelledby="ml-series">
+        <div class="learn-panel">
+          <div class="learn-panel__grid">
+            <div>
+              <p class="section-index">Series 02 · Machine learning</p>
+              <h2 id="ml-series">A deep dive into multilayer perceptrons.</h2>
+              <p>A 96-cell project covering a NumPy implementation, Keras architecture experiments, optimizers, deep-network training, regularization, diagnostics, and visualization.</p>
+              <div class="button-row">
+                <a class="button button--solid" href="https://github.com/chungenyu6/johnny_ai_interview_prep_2026/blob/main/01-ML/DL_MLP_All_Techniques.ipynb">View source</a>
+                <a class="button" href="https://colab.research.google.com/github/chungenyu6/johnny_ai_interview_prep_2026/blob/main/01-ML/DL_MLP_All_Techniques.ipynb">Open in Colab</a>
+              </div>
+            </div>
+            <div aria-label="MLP notebook topics">
+              <div class="learn-stat"><strong>96</strong><span>Hands-on cells</span></div>
+              <div class="learn-stat"><strong>06</strong><span>Major project parts</span></div>
+              <div class="learn-stat"><strong>NumPy → Keras</strong><span>From first principles to high-level tooling</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell site-footer__inner">
+        <div>
+          <p class="footer-name">Learn with Johnny</p>
+          <p class="footer-note">Rendered with MyST · Runnable in Colab · Source on GitHub</p>
+        </div>
+        <p class="footer-meta"><a href="../">Back to the personal site</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f5f3ec">
+    <meta name="description" content="SCoOP is a training-free uncertainty quantification framework for detecting hallucinations and enabling abstention across multiple vision-language models.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SCoOP — Semantic Consistent Opinion Pooling">
+    <meta property="og:description" content="System-level uncertainty for multi-VLM hallucination detection and reliable abstention.">
+    <meta property="og:url" content="https://chungenyu6.github.io/my-personal-website/research/scoop/">
+    <meta property="og:image" content="https://chungenyu6.github.io/my-personal-website/assets/images/social-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Chung-En (Johnny) Yu and the statement Reliable AI that knows when to doubt">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://chungenyu6.github.io/my-personal-website/research/scoop/">
+    <link rel="icon" href="../../favicon.ico" sizes="any">
+    <link rel="preload" href="../../assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <title>SCoOP — Chung-En (Johnny) Yu</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="site-shell site-header__inner">
+        <a class="site-name" href="../../">Chung-En <span>(Johnny)</span> Yu</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../../#research" aria-current="page">Research</a>
+          <a href="../../publications/">Publications</a>
+          <a href="../../learn/">Learn</a>
+          <a href="mailto:chungenyu6@gmail.com">Email</a>
+          <a class="nav-cta" href="../../assets/documents/cv-chung-en-johnny-yu.pdf">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <article>
+        <header class="project-hero site-shell">
+          <p class="project-kicker">ICLR 2026 Workshop · Poster</p>
+          <h1 class="project-title">SCoOP: uncertainty across a chorus of models.</h1>
+          <p class="project-deck">
+            Semantic Consistent Opinion Pooling is a training-free framework that aggregates heterogeneous vision-language models while measuring collective, system-level uncertainty.
+          </p>
+          <div class="button-row">
+            <a class="button button--solid" href="https://doi.org/10.48550/arXiv.2603.23853">Read the paper</a>
+            <a class="button" href="https://github.com/chungenyu6/SCoOP">View the code</a>
+          </div>
+
+          <figure class="project-figure">
+            <img
+              src="../../assets/images/scoop-overview.png"
+              width="1332"
+              height="764"
+              alt="SCoOP system overview showing multiple vision-language models feeding uncertainty-weighted opinion pooling"
+              decoding="async"
+              loading="lazy"
+            >
+            <figcaption>System overview: responses from heterogeneous VLMs are semantically aligned, uncertainty-weighted, and pooled into a final prediction with a system-level uncertainty score.</figcaption>
+          </figure>
+        </header>
+
+        <div class="project-content site-shell">
+          <aside class="project-aside" aria-label="Project details">
+            <dl>
+              <div>
+                <dt>Authors</dt>
+                <dd>Chung-En Johnny Yu<br>Brian Jalaian<br>Nathaniel D. Bastian</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>ICLR 2026 Workshop on Agentic AI in the Wild</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Multi-VLM uncertainty, hallucination detection, abstention</dd>
+              </div>
+            </dl>
+          </aside>
+
+          <div class="prose">
+            <h2>The reliability gap</h2>
+            <p>
+              Combining multiple vision-language models can improve multimodal reasoning, but aggregation also hides disagreement. Standard approaches such as majority voting produce an answer without revealing whether the system reached it through broad agreement or uncertain compromise.
+            </p>
+            <p>
+              SCoOP treats that disagreement as useful evidence. It maps responses from heterogeneous models into a shared semantic space, estimates confidence for each model, and produces both an aggregated answer and a collective uncertainty score.
+            </p>
+
+            <h2>How it works</h2>
+            <ol>
+              <li><strong>Query and sample.</strong> Multiple VLMs receive the same input and generate several candidate responses.</li>
+              <li><strong>Align semantics.</strong> Responses are mapped into a consistent option space so different wording does not look like disagreement.</li>
+              <li><strong>Weight uncertainty.</strong> Each model receives a weight derived from its confidence, using inverse entropy.</li>
+              <li><strong>Pool opinions.</strong> Weighted opinions form the final answer and a system-level uncertainty score for detection or abstention.</li>
+            </ol>
+
+            <h2>What we found</h2>
+            <div class="result-grid" aria-label="Key results">
+              <div class="result"><strong>0.866</strong><span>AUROC for hallucination detection on ScienceQA</span></div>
+              <div class="result"><strong>0.907</strong><span>AURAC for reliable abstention</span></div>
+              <div class="result"><strong>μs</strong><span>Aggregation overhead relative to seconds-long VLM inference</span></div>
+            </div>
+            <p>
+              On ScienceQA, SCoOP improves hallucination detection by roughly 10–13% over the evaluated aggregation baselines and improves abstention performance by 7–9%, while adding only microsecond-level aggregation overhead.
+            </p>
+
+            <h2>Why it matters</h2>
+            <p>
+              Reliable AI systems should not only produce stronger answers; they should expose when those answers are fragile. SCoOP offers a practical, training-free mechanism for multi-model systems to know when they do not know—without retraining the underlying VLMs or requiring labeled calibration data.
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell site-footer__inner">
+        <div>
+          <p class="footer-name">SCoOP</p>
+          <p class="footer-note">Semantic Consistent Opinion Pooling · 2026</p>
+        </div>
+        <p class="footer-meta"><a href="../../publications/">Back to publications</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

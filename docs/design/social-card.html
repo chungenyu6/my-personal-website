@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Social card source — Chung-En (Johnny) Yu</title>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        font-weight: 400 700;
+        src: url("/assets/fonts/inter-latin-variable.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Newsreader";
+        font-weight: 400 600;
+        src: url("/assets/fonts/newsreader-latin-variable.woff2") format("woff2");
+      }
+      * { box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+      body {
+        display: grid;
+        grid-template-columns: 1fr 330px;
+        gap: 64px;
+        padding: 70px 76px;
+        background: #f5f3ec;
+        color: #17212b;
+        font-family: "Inter", sans-serif;
+      }
+      .eyebrow {
+        margin: 0 0 28px;
+        color: #52606d;
+        font-size: 16px;
+        font-weight: 680;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 700px;
+        margin: 0 0 34px;
+        font-family: "Newsreader", serif;
+        font-size: 78px;
+        font-weight: 470;
+        letter-spacing: -0.05em;
+        line-height: 0.94;
+      }
+      h1 span { color: #163d9f; }
+      .focus {
+        max-width: 670px;
+        margin: 0;
+        color: #52606d;
+        font-size: 20px;
+        line-height: 1.45;
+      }
+      .portrait {
+        position: relative;
+        align-self: center;
+      }
+      .portrait::before {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        width: 150px;
+        height: 90px;
+        border-top: 3px solid #2156d9;
+        border-right: 3px solid #2156d9;
+        content: "";
+      }
+      img {
+        display: block;
+        position: relative;
+        width: 330px;
+        height: 430px;
+        border-radius: 14px;
+        object-fit: cover;
+        object-position: 50% 38%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Chung-En (Johnny) Yu · AI researcher</p>
+      <h1>Reliable AI that knows <span>when to doubt.</span></h1>
+      <p class="focus">Agentic AI · Multimodal foundation models · Uncertainty quantification · Adversarial robustness</p>
+    </main>
+    <div class="portrait">
+      <img src="/assets/images/johnny-yu.jpg" alt="">
+    </div>
+  </body>
+</html>
