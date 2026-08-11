@@ -28,7 +28,7 @@ flowchart TB
 - Notebook site 保留 MyST 的 code、math、table of contents、cross-references、downloads 與 Colab links。
 - 較重的 notebook build 即使失敗，也不會阻擋 biography 或 publication updates。
 - 每個 repository 都有清楚目的，也能減少 agent 每次需要理解的 context。
-- 目前舊站 remote 已經指向名為 `johnny_ai_interview_prep_2026` 的獨立 notebook repository。
+- 2026-08-11 經使用者核准，舊個人網站 repository 已 rename 為 `ai-learning-notebooks`，並重新定位為獨立 MyST／Notebook 教材站。
 
 取捨：訪客閱讀教材時會前往另一個 GitHub Pages path。只要保留一致 branding 與清楚的返回連結，這項成本可以接受。
 

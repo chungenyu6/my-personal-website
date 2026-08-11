@@ -1,6 +1,6 @@
 # Chung-En (Johnny) Yu — 個人網站
 
-> 狀態：Option A 主網站與獨立 MyST 教材網站已完成本機 implementation／validation；正在建立 `chungenyu6/my-personal-website` 並啟用 GitHub Pages。
+> 狀態：Option A 主網站與獨立 MyST 教材網站均已部署至 GitHub Pages，並使用分離的 repositories 與 deployment workflows。
 
 這個 repository 是 Chung-En (Johnny) Yu 的研究者個人網站。公開頁面以英文呈現；提供給使用者與 agents 閱讀的 planning、decision、operation 文件則預設使用繁體中文。
 
@@ -19,7 +19,7 @@ flowchart LR
     P --> R["Research／Publications"]
     P --> C["CV／Profiles／Email"]
     P --> L["Learn 入口"]
-    L --> M["johnny_ai_interview_prep_2026<br>獨立 MyST 教材網站"]
+    L --> M["ai-learning-notebooks<br>獨立 MyST 教材網站"]
     M --> N["Rendered notebooks"]
     M --> G["GitHub source"]
     M --> B["Open in Colab"]
@@ -65,7 +65,7 @@ npx --yes mystmd start
 
 ```bash
 cd my-old-web/jbook_file
-BASE_URL=/johnny_ai_interview_prep_2026 npx --yes mystmd build --html
+BASE_URL=/ai-learning-notebooks npx --yes mystmd build --html
 ```
 
 MyST build 只 render 已存在的 notebook outputs，不在 CI 執行昂貴或需要 network 的 notebook code。

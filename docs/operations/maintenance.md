@@ -47,7 +47,7 @@ python3 -m http.server 8000 --directory _site
 
 ```bash
 cd my-old-web/jbook_file
-BASE_URL=/johnny_ai_interview_prep_2026 npx --yes mystmd build --html
+BASE_URL=/ai-learning-notebooks npx --yes mystmd build --html
 ```
 
 ## 不要做的事
