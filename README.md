@@ -1,6 +1,6 @@
 # Chung-En (Johnny) Yu — 個人網站
 
-> 狀態：Option A 主網站已部署至 GitHub Pages；MyST 教材站更新已完成 build 與 branch validation，等待核准 fast-forward 至教材 repository 的 `main`。
+> 狀態：Option A 主網站與獨立 MyST 教材網站均已部署至 GitHub Pages，並使用分離的 repositories 與 deployment workflows。
 
 這個 repository 是 Chung-En (Johnny) Yu 的研究者個人網站。公開頁面以英文呈現；提供給使用者與 agents 閱讀的 planning、decision、operation 文件則預設使用繁體中文。
 
