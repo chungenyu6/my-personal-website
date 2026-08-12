@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML_FILES = sorted(set(ROOT.glob("*.html")) | set(ROOT.glob("**/index.html")))
-IGNORED_PARTS = {"my-old-web", "_site", ".git"}
+IGNORED_PARTS = {"_site", ".git"}
 
 
 class PageParser(HTMLParser):

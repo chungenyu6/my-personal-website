@@ -25,22 +25,22 @@ flowchart LR
     M --> B["Open in Colab"]
 ```
 
-## 專案結構
+## Repository 架構
 
 ```text
-.
-├── index.html                 # 主首頁
-├── publications/index.html   # 完整 publications
-├── research/scoop/index.html # SCoOP project page
-├── learn/index.html           # 教材導覽與 GitHub／Colab links
-├── assets/                    # CSS、fonts、images、CV
-├── scripts/                   # validation 與 build scripts
-├── docs/                      # planning、decisions、design、operations
-├── .github/workflows/         # GitHub Pages workflow
-└── my-old-web/jbook_file/     # 獨立的 legacy／MyST nested repository
+github-center/
+├── personal-website/          # 主網站 repository
+│   ├── index.html
+│   ├── publications/
+│   ├── research/
+│   ├── learn/
+│   ├── assets/
+│   ├── scripts/
+│   └── docs/
+└── ai-learning-notebooks/     # 獨立 MyST 教材 repository
 ```
 
-`my-old-web/jbook_file/` 具有自己的 Git history 與 remote。主網站不會在 build 時依賴它；需要的文字、圖片與 CV 已經 migration 到主站自己的 `assets/` 與 HTML。
+兩個 repositories 是相鄰但完全獨立的 checkouts，各自擁有 Git history、remote 與 GitHub Pages workflow。主網站不會在 build 時依賴教材 repository；兩站只透過公開 URL 互相連結。
 
 ## 本機執行
 
@@ -57,14 +57,14 @@ python3 -m http.server 8000 --directory _site
 MyST 教材網站：
 
 ```bash
-cd my-old-web/jbook_file
+cd ../ai-learning-notebooks
 npx --yes mystmd start
 ```
 
 驗證實際 GitHub Pages base path：
 
 ```bash
-cd my-old-web/jbook_file
+cd ../ai-learning-notebooks
 BASE_URL=/ai-learning-notebooks npx --yes mystmd build --html
 ```
 
@@ -96,9 +96,9 @@ flowchart TD
 - [維護與內容更新手冊](docs/operations/maintenance.md)
 - [Agent 作業規範](AGENTS.md)
 
-## 保護舊站與 credentials
+## Repository 與 credentials
 
-- 新版 production 完成並經使用者 review 前，不刪除 `my-old-web/`。
-- 不得 reset、覆寫或 commit nested repository 內既有的 `.DS_Store` 變更。
+- `personal-website` 與 `ai-learning-notebooks` 必須維持獨立 repositories，不建立 nested repository 或 submodule dependency。
+- 不得 reset、覆寫或 commit 教材 repository 內既有的 `.DS_Store` 變更。
 - 不得將 SSH keys、tokens、cookies、`.env` 或其他 credentials 寫入 repository。
 - GitHub SSH credentials 只能留在使用者的 global environment；repository 內不保存副本。

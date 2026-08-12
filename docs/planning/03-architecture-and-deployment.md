@@ -62,26 +62,17 @@ flowchart TB
 
 ## 建議 repository layout
 
-以下是目標架構，並非目前已實作的結構：
+目前採用以下 sibling repositories 架構：
 
 ```text
-personal-website/
-├── AGENTS.md
-├── README.md
-├── docs/
-│   ├── planning/
-│   └── decisions/
-├── site/
-│   ├── index.html
-│   ├── publications/
-│   ├── research/
+github-center/
+├── personal-website/       # 主網站 repository
+│   ├── AGENTS.md
+│   ├── README.md
+│   ├── docs/
 │   ├── assets/
-│   └── data/
-├── scripts/
-│   └── validate-links.*
-├── tests/
-│   └── smoke.*
-└── my-old-web/          # 本機舊站來源；不要 commit 到新 repository
+│   └── scripts/
+└── ai-learning-notebooks/  # 相鄰且獨立的 MyST 教材 repository
 ```
 
 如果使用者核准 no-build static implementation，可以直接 publish `site/`。如果未來 structured content generation 的價值變得明確，再加入小型 static-site generator；version one 並不需要這項複雜度。

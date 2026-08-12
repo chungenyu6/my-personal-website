@@ -61,10 +61,10 @@ Review 日期：2026-08-11
 ## 現有技術與 repository 狀態
 
 - 最上層 `personal-website/` 已初始化並發布為 `chungenyu6/my-personal-website`。
-- `my-old-web/jbook_file/` 是位於 branch `main` 的 nested Git repository。
-- Nested repository 已 rename，local remote 是 `git@github.com:chungenyu6/ai-learning-notebooks.git`。
+- `ai-learning-notebooks/` 已搬移為與 `personal-website/` 相鄰的獨立 Git repository，位於 branch `main`。
+- 教材 repository 已 rename，local remote 是 `git@github.com:chungenyu6/ai-learning-notebooks.git`。
 - `myst.yml`、README 與 local remote 已統一使用 canonical repository `chungenyu6/ai-learning-notebooks`。
-- 舊站 Git status 包含使用者擁有的 `.DS_Store` 本機變更，必須保留。
+- 教材 repository 的 Git status 包含使用者擁有的 `.DS_Store` 本機變更，必須保留。
 - 目前的 GitHub Action 可以使用 MyST／Jupyter Book build 並部署至 Pages，代表 notebooks 本身可透過 static hosting 發布。
 
 ## Migration 時需要處理的內容問題

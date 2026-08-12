@@ -9,6 +9,3 @@ dist/
 coverage/
 tmp/
 artifacts/
-
-# The legacy site remains a separate local Git repository until the new site is stable.
-my-old-web/

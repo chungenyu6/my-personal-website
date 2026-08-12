@@ -30,12 +30,12 @@
 - 如果未來需要 `CLAUDE.md` 等相容性檔案，應將它們建立為指向 `AGENTS.md` 的 symbolic link；不要維護內容重複的 instructions。
 - 在 implementation changes 依賴重大決策前，先將決策記錄於 planning documents。
 
-## 舊站內容政策
+## 教材 repository 與 legacy 內容政策
 
-- `my-old-web/jbook_file/` 的教材 migration 與 MyST deployment 更新已獲核准；它仍是具有獨立 history／remote 的 nested repository。
-- 該目錄是 nested Git repository，包含使用者擁有的 history 與本機 `.DS_Store` 變更。
+- 教材 repository 位於相鄰的 `../ai-learning-notebooks/`，具有獨立 history、remote 與 deployment workflow；不得再放回主站形成 nested repository，也不使用 Git submodule。
+- 教材 repository 仍包含使用者擁有的 history 與本機 `.DS_Store` 變更。
 - 可以對教材 source、MyST config 與其 deployment workflow 做範圍明確的更新；除非使用者明確要求，否則不得 delete、reset、rewrite history 或自行 commit。
-- 舊版個人頁面與資產在新版 production 穩定且經使用者 review 前不得刪除。
+- 舊版 production 已穩定並經使用者 review；2026-08-11 已核准移除完成 migration 的 legacy 個人頁面與資產。
 - Migration 時應將經過選擇與 review 的內容複製到新網站的 content model；不要讓新網站依賴舊站內不穩定的 paths。
 - 保留正確的 authorship、venue、paper、code 與 profile links。若日期或研究狀態互相衝突，應標記並請使用者 review，不可自行安靜地選擇其中一個版本。
 - 不要因為 CV 中存在某項資訊就直接公開 private information；尤其必須確認公開 CV 是否應顯示電話號碼。

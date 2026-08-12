@@ -23,7 +23,7 @@
 
 ### 新增 notebook
 
-1. 在 `my-old-web/jbook_file/` 的獨立 repository 更新 notebook 與 `myst.yml` TOC。
+1. 在相鄰的 `../ai-learning-notebooks/` repository 更新 notebook 與 `myst.yml` TOC。
 2. 在 `learn/index.html` 加入 rendered MyST、GitHub source 與 Colab link。
 3. 執行 MyST build；預設不要加 `--execute`，避免 CI 執行耗時或 network-dependent code。
 
@@ -46,7 +46,7 @@ python3 -m http.server 8000 --directory _site
 教材網站另外執行：
 
 ```bash
-cd my-old-web/jbook_file
+cd ../ai-learning-notebooks
 BASE_URL=/ai-learning-notebooks npx --yes mystmd build --html
 ```
 
@@ -54,7 +54,7 @@ BASE_URL=/ai-learning-notebooks npx --yes mystmd build --html
 
 - 不要引入 framework、CMS、analytics、database 或 animation library，除非有明確需求與使用者核准。
 - 不要直接編輯 `_site/` 或 MyST 的 `_build/`；它們都是 generated artifacts。
-- 不要刪除 `my-old-web/`，直到新版 production 已穩定且使用者完成 final review。
+- 不要把 `ai-learning-notebooks` 放進主站形成 nested repository；兩者維持相鄰且獨立的 checkouts。
 - 不要將 secrets、SSH private keys、tokens、cookies 或 `.env` commit 到 repository。
 
 ## Handoff 最低資訊
