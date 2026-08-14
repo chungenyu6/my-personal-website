@@ -21,6 +21,7 @@
     <link rel="preload" href="./assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./assets/fonts/newsreader-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/site.js" defer></script>
     <title>Chung-En (Johnny) Yu — AI Researcher</title>
     <script type="application/ld+json">
       {
@@ -58,12 +59,12 @@
       <div class="site-shell site-header__inner">
         <a class="site-name" href="./" aria-current="page">Chung-En <span>(Johnny)</span> Yu</a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#research">Research</a>
           <a href="./publications/">Publications</a>
           <a href="./learn/">Learn</a>
-          <a href="mailto:chungenyu6@gmail.com">Email</a>
+          <button class="email-copy" type="button" data-email="chungenyu6@gmail.com" aria-label="Copy email address">Email</button>
           <a class="nav-cta" href="./assets/documents/cv-chung-en-johnny-yu.pdf">CV</a>
         </nav>
+        <p class="copy-status" role="status" aria-live="polite"></p>
       </div>
     </header>
 
@@ -117,9 +118,46 @@
         </div>
       </div>
 
+      <section class="content-section site-shell" aria-labelledby="news-title">
+        <div class="news-grid">
+          <div class="news-intro">
+            <p class="section-index">01 · Now</p>
+            <h2 id="news-title">Recent notes</h2>
+            <p>Research milestones, presentations, and new work. The complete record lives in my CV and publication list.</p>
+          </div>
+
+          <ol class="news-list">
+            <li class="news-item">
+              <time datetime="2026-08-14">2026 · Aug 14</time>
+              <p>Presented <a href="https://doi.org/10.48550/arXiv.2509.15435">ORCA</a> in an oral session at <a href="https://www.iccbdc.org/">ACM ICCBDC 2026</a>.</p>
+            </li>
+            <li class="news-item">
+              <time datetime="2026-06-22">2026 · Jun 22</time>
+              <p>Invited to a Technical Exchange Meeting hosted by the United States Military Academy at West Point.</p>
+            </li>
+            <li class="news-item">
+              <time datetime="2026-04-14">2026 · Apr 14</time>
+              <p><a href="https://doi.org/10.48550/arXiv.2509.15435">ORCA</a> was accepted for an oral presentation at <a href="https://www.iccbdc.org/">ACM ICCBDC 2026</a>.</p>
+            </li>
+            <li class="news-item">
+              <time datetime="2026-04-14">2026 · Apr 14</time>
+              <p><a href="https://doi.org/10.48550/arXiv.2509.16343">Visual Reasoning Agent</a> was accepted to the <a href="https://www.mors.org/events/workshops/ai-workshop?_zs=vCwnh&amp;_zl=IC3s4">MORS 2026 Artificial Intelligence Workshop</a> Proceedings.</p>
+            </li>
+            <li class="news-item">
+              <time datetime="2026-04-13">2026 · Apr 13</time>
+              <p>Passed the Ph.D. qualifying examination.</p>
+            </li>
+            <li class="news-item">
+              <time datetime="2026-03-25">2026 · Mar 25</time>
+              <p><a href="./research/scoop/">SCoOP</a> is available on arXiv and GitHub.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
       <section class="content-section site-shell" id="research" aria-labelledby="research-title">
         <div class="section-heading">
-          <p class="section-index">01 · Research</p>
+          <p class="section-index">02 · Research</p>
           <h2 id="research-title">Selected Publications</h2>
           <a class="text-link" href="./publications/">All publications</a>
         </div>
@@ -170,39 +208,6 @@
             </div>
           </li>
         </ol>
-      </section>
-
-      <section class="content-section site-shell" aria-labelledby="news-title">
-        <div class="news-grid">
-          <div class="news-intro">
-            <p class="section-index">02 · Now</p>
-            <h2 id="news-title">Recent notes</h2>
-            <p>Research milestones, presentations, and new work. The complete record lives in my CV and publication list.</p>
-          </div>
-
-          <ol class="news-list">
-            <li class="news-item">
-              <time datetime="2026-06-22">2026 · Jun 22</time>
-              <p>Invited to a Technical Exchange Meeting hosted by the United States Military Academy at West Point.</p>
-            </li>
-            <li class="news-item">
-              <time datetime="2026-04-14">2026 · Apr 14</time>
-              <p><a href="https://doi.org/10.48550/arXiv.2509.15435">ORCA</a> was accepted for an oral presentation at ACM ICCBDC 2026.</p>
-            </li>
-            <li class="news-item">
-              <time datetime="2026-04-14">2026 · Apr 14</time>
-              <p><a href="https://doi.org/10.48550/arXiv.2509.16343">Visual Reasoning Agent</a> was accepted to the MORS 2026 Artificial Intelligence Workshop Proceedings.</p>
-            </li>
-            <li class="news-item">
-              <time datetime="2026-04-13">2026 · Apr 13</time>
-              <p>Passed the Ph.D. qualifying examination.</p>
-            </li>
-            <li class="news-item">
-              <time datetime="2026-03-25">2026 · Mar 25</time>
-              <p><a href="./research/scoop/">SCoOP</a> is available on arXiv and GitHub.</p>
-            </li>
-          </ol>
-        </div>
       </section>
 
       <section class="content-section site-shell" aria-labelledby="learn-title">

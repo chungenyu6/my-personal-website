@@ -8,15 +8,15 @@
 
 - 視覺方向：以清楚的研究者網站為資訊基礎，加入較成熟的 editorial typography 與留白。
 - 字體：self-hosted `Newsreader`（display）與 `Inter`（body），不依賴 Google Fonts 或 runtime CDN。
-- 技術：semantic HTML、modern CSS、零 client-side JavaScript、零 production dependency。
-- 主內容：研究定位、selected research、publications、news、Learn、CV 與聯絡方式。
+- 技術：semantic HTML、modern CSS、少量原生 JavaScript（email copy feedback）、零 production dependency。
+- 主內容：研究定位、selected publications、news、Learn、CV 與聯絡方式。
 - Hosting：主網站與教材網站皆使用 GitHub Pages，但維持獨立 repository 與 deployment lifecycle。
 
 ```mermaid
 flowchart LR
     V["訪客"] --> P["my-personal-website<br>研究者個人網站"]
     P --> H["首頁／研究定位"]
-    P --> R["Research／Publications"]
+    P --> R["News／Publications"]
     P --> C["CV／Profiles／Email"]
     P --> L["Learn 入口"]
     L --> M["ai-learning-notebooks<br>獨立 MyST 教材網站"]

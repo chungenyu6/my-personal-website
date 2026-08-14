@@ -180,8 +180,10 @@ li {
   gap: clamp(1rem, 2.4vw, 2rem);
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav button {
   color: var(--slate);
+  font-family: inherit;
   font-size: 0.83rem;
   font-weight: 620;
   letter-spacing: 0.015em;
@@ -189,8 +191,41 @@ li {
 }
 
 .site-nav a:hover,
+.site-nav button:hover,
 .site-nav a[aria-current="page"] {
   color: var(--ink);
+}
+
+.email-copy {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.copy-status {
+  position: fixed;
+  z-index: 100;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  box-shadow: 0 0.75rem 2rem rgb(23 33 43 / 18%);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 650;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.copy-status.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .site-nav .nav-cta {
@@ -1041,7 +1076,8 @@ li {
     display: none;
   }
 
-  .site-nav a {
+  .site-nav a,
+  .site-nav button {
     white-space: nowrap;
   }
 
