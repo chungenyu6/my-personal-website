@@ -19,6 +19,7 @@ PUBLIC_PATHS = [
     "site.webmanifest",
     "assets",
     "publications",
+    "news",
     "research",
     "learn",
 ]

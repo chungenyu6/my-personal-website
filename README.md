@@ -31,6 +31,7 @@ flowchart LR
 github-center/
 ├── personal-website/          # 主網站 repository
 │   ├── index.html
+│   ├── news/
 │   ├── publications/
 │   ├── research/
 │   ├── learn/
