@@ -380,7 +380,7 @@ li {
 }
 
 .focus-strip {
-  border-block: 1px solid var(--mist);
+  border-block-start: 1px solid var(--mist);
 }
 
 .focus-strip__inner {
@@ -407,6 +407,20 @@ li {
 
 .content-section {
   padding-block: var(--space-8);
+}
+
+.home-section {
+  padding-block: clamp(2.75rem, 5vw, 4.75rem);
+  border-top: 2px solid rgb(23 33 43 / 27%);
+}
+
+.home-section .teaching-overview {
+  padding-block: 0;
+  border-top: 0;
+}
+
+.home-section .teaching-overview .section-index {
+  margin-bottom: 0.75rem;
 }
 
 .section-heading {
