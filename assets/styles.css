@@ -336,16 +336,10 @@ li {
 }
 
 .profile-role {
-  margin: 0 0 0.25rem;
+  margin: 0 0 var(--space-3);
   font-size: 1rem;
   font-weight: 680;
   line-height: 1.4;
-}
-
-.profile-location {
-  margin-bottom: var(--space-3);
-  color: var(--slate);
-  font-size: 0.82rem;
 }
 
 .profile-links {
@@ -1088,7 +1082,7 @@ li {
   }
 
   .profile-portrait {
-    grid-row: span 3;
+    grid-row: span 2;
   }
 
   .section-heading,
