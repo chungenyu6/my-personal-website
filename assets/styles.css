@@ -590,6 +590,65 @@ li {
   border: 0;
 }
 
+.teaching-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr);
+  gap: clamp(1.25rem, 5vw, 4rem);
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+  border-top: 1px solid var(--mist);
+}
+
+.teaching-overview h2 {
+  margin: 0 0 0.55rem;
+  font: 500 clamp(2rem, 4vw, 3.5rem)/1 "Newsreader", Georgia, serif;
+  letter-spacing: -0.035em;
+}
+
+.teaching-overview p {
+  margin-bottom: 0.65rem;
+  color: var(--slate);
+}
+
+.teaching-catalog {
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
+
+.teaching-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teaching-list li + li {
+  border-top: 1px solid var(--mist);
+}
+
+.teaching-link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0.5rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.teaching-link:hover {
+  background: var(--sage);
+}
+
+.teaching-link small {
+  display: block;
+  color: var(--slate);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 42rem) {
+  .teaching-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
 .learn-panel {
   position: relative;
   overflow: hidden;
