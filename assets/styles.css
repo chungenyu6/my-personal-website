@@ -345,7 +345,7 @@ li {
 .profile-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 0.9rem;
+  gap: 0.125rem 0.7rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -354,10 +354,11 @@ li {
 .profile-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  color: var(--ink);
-  font-size: 0.79rem;
-  font-weight: 620;
+  gap: 0.25rem;
+  min-height: 1.5rem;
+  color: var(--slate);
+  font-size: 0.75rem;
+  font-weight: 550;
   text-decoration: none;
 }
 
@@ -366,8 +367,8 @@ li {
 }
 
 .profile-links svg {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.625rem;
+  height: 0.625rem;
   flex: none;
   fill: currentColor;
 }
