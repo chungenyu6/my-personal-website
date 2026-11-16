@@ -352,13 +352,26 @@ li {
 }
 
 .profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   color: var(--ink);
   font-size: 0.79rem;
   font-weight: 620;
   text-decoration: none;
 }
 
-.profile-links a::after,
+.profile-links a:hover {
+  color: var(--signal-dark);
+}
+
+.profile-links svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex: none;
+  fill: currentColor;
+}
+
 .text-link::after,
 .record-link::after {
   margin-left: 0.25em;
